@@ -1,0 +1,6 @@
+node_modules/
+dist/
+squashfs-root/
+*.AppImage
+test_output.gcode
+test_cube.gcode

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>STL Slicer - Geeetech A30 Pro</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1e1e2e;
+      color: #cdd6f4;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #89b4fa;
+    }
+
+    p.subtitle {
+      color: #6c7086;
+      font-size: 14px;
+    }
+
+    #drop-zone {
+      width: 400px;
+      height: 180px;
+      border: 2px dashed #89b4fa;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      gap: 10px;
+    }
+
+    #drop-zone:hover {
+      background: #2a2a3e;
+      border-color: #cba6f7;
+    }
+
+    #drop-zone span {
+      font-size: 40px;
+    }
+
+    #file-name {
+      font-size: 13px;
+      color: #a6e3a1;
+    }
+
+    button#slice-btn {
+      padding: 12px 40px;
+      background: #89b4fa;
+      color: #1e1e2e;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button#slice-btn:hover {
+      background: #cba6f7;
+    }
+
+    button#slice-btn:disabled {
+      background: #45475a;
+      cursor: not-allowed;
+    }
+
+    #status {
+      font-size: 14px;
+      min-height: 20px;
+    }
+
+    .success { color: #a6e3a1; }
+    .error { color: #f38ba8; }
+    .loading { color: #f9e2af; }
+
+    #watermark {
+      position: fixed;
+      bottom: 12px;
+      right: 16px;
+      font-size: 11px;
+      color: #45475a;
+      letter-spacing: 0.5px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🖨️ STL Slicer</h1>
+  <p class="subtitle">Geeetech A30 Pro — CuraEngine 5.6.0</p>
+
+  <div id="drop-zone">
+    <span>📂</span>
+    <p>Click to select STL file</p>
+    <p id="file-name">No file selected</p>
+  </div>
+
+  <button id="slice-btn" disabled>Slice to G-code</button>
+  <p id="status"></p>
+
+  <div id="watermark">Built by Abdessamed Yousfi · 2026</div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

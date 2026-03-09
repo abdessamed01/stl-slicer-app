@@ -1,0 +1,58 @@
+{
+  "name": "stl-slicer-app",
+  "version": "1.0.0",
+  "description": "STL to G-code slicer for Geeetech A30 Pro",
+  "main": "src/main.js",
+  "homepage": "https://github.com/abdessamed01/stl-slicer-app",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --linux deb"
+  },
+  "build": {
+    "appId": "com.abdessamed.stl-slicer",
+    "productName": "STL Slicer",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": "deb",
+      "category": "Utility",
+      "maintainer": "Abdessamed <yousfiabdessamed76@gmail.com>"
+    },
+    "files": [
+      "src/**/*",
+      "geeetech_A30Pro.def.json",
+      "Geeetech_Base_Single_Extruder.def.json",
+      "fdmprinter.def.json",
+      "fdmextruder.def.json"
+    ],
+    "extraResources": [
+      {
+        "from": "geeetech_A30Pro.def.json",
+        "to": "geeetech_A30Pro.def.json"
+      },
+      {
+        "from": "Geeetech_Base_Single_Extruder.def.json",
+        "to": "Geeetech_Base_Single_Extruder.def.json"
+      },
+      {
+        "from": "fdmprinter.def.json",
+        "to": "fdmprinter.def.json"
+      },
+      {
+        "from": "fdmextruder.def.json",
+        "to": "fdmextruder.def.json"
+      }
+    ]
+  },
+  "keywords": [],
+  "author": {
+    "name": "Abdessamed",
+    "email": "yousfiabdessamed76@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^40.8.0",
+    "electron-builder": "^25.0.0"
+  }
+}
