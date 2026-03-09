@@ -6,7 +6,7 @@ A custom desktop slicer application built from scratch on Pop!_OS Linux. Convert
 
 ## 📸 Screenshots
 
-```
+
 ![STL Slicer App](screenshots/app.png)
 
 ---
